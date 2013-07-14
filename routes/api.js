@@ -1,6 +1,6 @@
 var params = require('../params.js');
-var format = require('../format.js')
-var talks = require('../talks.js');
+var format = require('../api/format.js')
+var talks = require('../api/talks.js');
 
 exports.register = function(server) {
 	var log = function(request) {

@@ -1,6 +1,4 @@
 var params = require('../params.js');
-var format = require('../format.js')
-var talks = require('../talks.js');
 var fileSystem = require('fs');
 
 exports.register = function(server) {
