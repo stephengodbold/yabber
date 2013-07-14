@@ -2,14 +2,8 @@ var params = require('../params.js');
 var fileSystem = require('fs');
 
 exports.register = function(server) {
-	var log = function(request) {
-		console.log(request.method + ' received for ' + request.url);
-	};
-
 	server.get('/',
 		function(request, response) {
-			log(request);
-
 			fileSystem.readFile('./views/index.html', 
 				function (err, data) {
 			  		if (err) throw err;
@@ -23,8 +17,6 @@ exports.register = function(server) {
 
 	server.get('/watch',
 		function(request, response) {
-			log(request);
-
 			fileSystem.readFile('./views/video.html', 
 				function (err, data) {
 			  		if (err) throw err;

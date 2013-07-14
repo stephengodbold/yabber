@@ -5,9 +5,15 @@ var port = 8888;
 
 server = express();
 
+//configure logging for requests
+server.use(function(request, response, next){
+  console.log(request.method + ' request for ' + request.url);
+  next();
+});
+
 //setup static content paths
 server.use(express.static(__dirname + '/public'))
-
+	
 //register routes
 api.register(server);
 app.register(server);
