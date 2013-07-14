@@ -1,30 +1,13 @@
 var express = require('express');
-var winston = require('winston');
-var params = require('./params.js');
-var format = require('./format.js')
-var talks = require('./talks.js');
+var api = require('./routes/api.js');
+var app = require('./routes/app.js');
 var port = 8888;
 
+//server.set('views', __dirname + '/views');
+//server.engine('html', require('ejs').renderFile);
+
 server = express();
-winston.extend(server);
-
-//LIST
-server.get('/', 
-	function(request, response) { 
-		format.json(
-			response, 
-			talks.talks);
-});
-
-//GET
-server.get('/talk/:id',
-	function(request, response) { 
-		format.json(
-			response,
-			talks.talk,
-			params.parseId(request.params));
-});
-
-//start server
+api.register(server);
+app.register(server);
 server.listen(port);
 console.log('Listening on ' + port);
