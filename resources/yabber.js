@@ -1,4 +1,4 @@
-function TalksCtrl($scope) {
+function TalksCtrl($scope, $resource) {
 	$scope.talks = [ 
 		{ title:"Meta-Presenting", speaker:"Tatham Oddie", isLive:false},
 		{ title:"PowerShell v4.0", speaker:"Jason Stangroome", isLive:true},

@@ -19,7 +19,6 @@ server.get('/',
 //GET
 server.get('/talk/:id',
 	function(request, response) { 
-		console.log(request);
 		format.json(
 			response,
 			talks.talk,

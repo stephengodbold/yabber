@@ -1,3 +1,0 @@
-exports.wrapJson = function(response, callback) {
-	return response.json(callback);
-};
