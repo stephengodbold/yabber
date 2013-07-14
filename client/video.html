@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">		
+	</head>
+	<body ng-app ng-controller="MediaCtrl">
+		<div class="container">
+			<h2>Now Playing - {{talk.title}}</h2>			
+			<p><a href="index.html">home</a></p>
+			<video controls>
+				<source src="http://content.bitsontherun.com/videos/nfSyO85Q-52qL9xLP.mp4" type="video/mp4">
+				<p>Sorry - your browser doesn't support video yet. You could try another browser?</p>
+			</video>
+			<a id="player"></a>
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/yabber.js"></script>
+	</body>
+</head>

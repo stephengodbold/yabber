@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		
+	</head>
+	<body ng-app ng-controller="TalksCtrl">
+		<div class="container">
+			<div>
+				<h1>Yabber</h1>
+				<p>A really basic group talk application</p>
+			</div>
+			<div >
+				<ul class="unstyled">
+					<li ng-repeat="talk in talks">
+						{{talk.title}}, <strong>{{talk.speaker}}</strong> 
+						<a href="video.html" ng-show="talk.isLive">watch</a>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>	
+		<script type="text/javascript" src="scripts/yabber.js"></script>
+	</body>
+</html>
